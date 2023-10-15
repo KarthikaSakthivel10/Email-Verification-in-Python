@@ -2,7 +2,7 @@ from email_validator import validate_email, EmailNotValidError
 import re
 import is_disposable_email
 
-def valide_or_not(email):
+def valid_or_not(email):
     pattern = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
     if re.match(pattern, email):
         print("This is an VALID Email Address")
@@ -27,7 +27,7 @@ def disposable_or_not(email):
 
 email = input("Enter the email address:")
 
-valide_or_not(email)
+valid_or_not(email)
 deliverable_or_not(email)
 disposable_or_not(email)
 
